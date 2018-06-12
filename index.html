@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Survey Form</title>
+  <meta charset="UTF-8">
+  <meta name="application-name" content="Survey Form">
+  <meta name="description" content="Single Page HTML/CSS Survey Form">
+  <meta name="keywords" content="Single page, HTML, CSS, Survey Form">
+  <meta name="author" content="David Capella">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Molengo" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lekton" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="public/stylesheets/index.css">
+</head>
+<body>
+  <main>
+    <div>
+      <h1 id="title">Survey Form</h1>
+    </div>
+    <fieldset>
+      <div>
+        <p id="description">Short description</p>
+      </div>
+      <form id="survey-form" target="_blank">
+        <div class="section-divide">
+          <label for="name" class="section-NEAS-left" id="name-label">* Name:</label>
+          <input type="text" name="name" placeholder="Name" class="section-NEAS-right" id="name-input" required>
+          <label for="email" class="section-NEAS-left" id="email-label">* Email:</label>
+          <input type="email" name="email" placeholder="Email" class="section-NEAS-right" id="email-input" required>
+          <label for="age" class="section-NEAS-left" id="number-label">* Age:</label>
+          <input type="number" name="age" min="1" max="125" placeholder="Age" class="section-NEAS-right" id="number-input" required>
+          <label for="dropdown" id="dropdown-label" class="section-select section-NEAS-left">Select one!</label>
+          <select name="dropdown" id="dropdown-select" class="section-select section-NEAS-right">
+            <option value="option1" id="option-one">Option 1</option>
+            <option value="option2" id="option-two">Option 2</option>
+            <option value="option3" id="option-three">Option 3</option>
+          </select>
+        </div>
+        <div class="section-divide">
+          <label id="radio-description" class="section-radio">Radio Buttons</label>
+          <label class="section-radio-right"><input type="radio" name="radio-button" value="radio1" id="radio-input-one" checked>Radio 1</label>
+          <label class="section-radio-right"><input type="radio" name="radio-button" value="radio2" id="radio-input-2">Radio 2</label>
+          <label class="section-radio-right"><input type="radio" name="radio-button" value="radio3" id="radio-input-3">Radio 3</label>
+        </div>
+        <div class="section-divide">
+          <label for="checkbox" name="checkbox" id="checkbox-description">Pick none or all!</label>
+          <label class="section-checkbox-right"><input type="checkbox" name="checkbox" value="value1" id="check-input-one">Value 1</label>
+          <label class="section-checkbox-right"><input type="checkbox" name="checkbox" value="value2" id="check-input-two">Value 2</label>
+          <label class="section-checkbox-right"><input type="checkbox" name="checkbox" value="value3" id="check-input-three">Value 3</label>
+        </div>
+        <div class="section-divide">
+          <label for="additional-comments" id="extra-label" class="extra">Any additional comments?</label>
+          <textarea name="comments" placeholder="Enter any additional comments..." form="survey-form" class="extra"></textarea>
+          <button type="submit" id="submit" class="btn-custom extra">Submit</button>
+        </div>
+      </form>
+    </fieldset>
+  </main>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
